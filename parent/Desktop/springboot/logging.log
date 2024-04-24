@@ -1,0 +1,3 @@
+2024-04-24T15:10:29.207+07:00 INFO [com.example.parent.ParentApplicationKt,,] main Starting ParentApplicationKt using Java 21.0.2 with PID 64355 (/home/panha/Desktop/springboot/parent/target/classes started by panha in /home/panha/Desktop/springboot/parent)
+2024-04-24T15:10:29.209+07:00 INFO [com.example.parent.ParentApplicationKt,,] main No active profile set, falling back to 1 default profile: "default"
+2024-04-24T15:10:30.697+07:00 INFO [com.example.parent.ParentApplicationKt,,] main Started ParentApplicationKt in 1.786 seconds (process running for 2.131)
