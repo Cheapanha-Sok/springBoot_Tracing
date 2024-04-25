@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+    <property name="logging.file.name" value="logging.log"/>
+    <property name="logging.file.path" value="/home/panha/Desktop/springboot"/>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${logging.file.path}/${logging.file.name}</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %level [%logger,%X{traceId},%X{spanId}] %thread %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %highlight(%level) [%yellow(%logger),%X{traceId},%X{spanId}] %thread %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+    <logger name="com.example.Grand_Child" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </logger>
+</configuration>

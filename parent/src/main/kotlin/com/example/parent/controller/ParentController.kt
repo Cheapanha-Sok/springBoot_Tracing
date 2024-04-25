@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate
 @RestController
 @RequestMapping("${Constants.MAIN_URL}parent")
 @Sl4JLogger
-class TestController(private val restTemplate: RestTemplate) {
+class ParentController(private val restTemplate: RestTemplate) {
 
     @GetMapping
     @Observed(
@@ -23,7 +23,7 @@ class TestController(private val restTemplate: RestTemplate) {
         contextualName = "parent-->child",
         lowCardinalityKeyValues = ["userType", "userType2"]
     )
-    fun home(): String {
+    fun parentLog(): String {
         val url : String= "http://localhost:9090/api/v1/child";
         val response: ResponseEntity<String> = restTemplate.exchange(
             url,
